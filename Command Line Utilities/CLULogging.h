@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-extern void CLULog(NSString *format, ...);
-extern void CLULogv(NSString *format, va_list args);
+extern void CLULog(NSString *format, ...) NS_FORMAT_FUNCTION(1, 2);
+extern void CLULogv(NSString *format, va_list args) NS_FORMAT_FUNCTION(1,0);
 
-extern void CLULogf(FILE *file, NSString *format, ...);
-extern void CLULogfv(FILE *file, NSString *format, va_list args);
+extern void CLULogf(FILE *file, NSString *format, ...)  NS_FORMAT_FUNCTION(2, 3);
+extern void CLULogfv(FILE *file, NSString *format, va_list args) NS_FORMAT_FUNCTION(2,0);
